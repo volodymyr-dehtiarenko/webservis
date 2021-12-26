@@ -1,0 +1,75 @@
+{% extends 'customer_profile/customer_panel.html' %}
+
+
+{% block customer_order %}
+    <form class="row g-3">
+        <h5 style="color: red">1) Что сломалось?</h5>
+        <div class="col-md-6">
+            <label for="validationDefault04" class="form-label">Тип устройства</label>
+            <select class="form-select" id="validationDefault04" required>
+                <option selected disabled value="">Выбрать</option>
+                <option>Принтер</option>
+                <option>Аудио устройство</option>
+                <option>Компьютер</option>
+                <option>Ноутбук</option>
+                <option>Планшет</option>
+                <option>Телефон</option>
+                <option>Сетевое устройство</option>
+                <option>Другое</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="validationDefault02" class="form-label">Название и номер модели</label>
+            <input type="text" class="form-control" id="validationDefault02" value="" required>
+            <div><p>
+                Пожалуйста напишите название и номер модели. <br> Например: ASUS X415EA-EB853</p>
+            </div>
+        </div>
+        <div class="form-floating">
+
+            <textarea class="form-control"  placeholder="Leave a comment here" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Опишите Вашу проблемму....</label>
+        </div>
+        <hr>
+         <h5 style="color: red">2) Адрес куда нужно приехать:</h5>
+        <div class="col-md-6">
+            <label for="validationDefault04" class="form-label">Город</label>
+            <select class="form-select" id="validationDefault04" required>
+                <option selected disabled value="">Выбрать...</option>
+                <option>Братислава</option>
+                <option>Ступава</option>
+                <option>Малацки</option>
+                <option>Марьинка</option>
+                <option>Лозорно</option>
+                <option>Загор</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Адрес</label>
+            <input type="text" class="form-control" id="validationDefault05" required>
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault05" class="form-label">Желаемое время</label>
+            <input type="text" class="form-control" id="validationDefault05" required>
+        </div>
+        <div class="form-floating">
+
+            <textarea class="form-control"  placeholder="Leave a comment here" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Информация для курьера....</label>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                    Согласен с условиями
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Отправить заказ</button>
+        </div>
+    </form>
+
+{% endblock customer_order %}

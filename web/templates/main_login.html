@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block login %}
+<div class="container w-25">
+  <div class="row justify-content-center align-items-center text-center mb-3">
+    <main class="form-signin">
+  <form>
+{#    <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">#}
+    <h1 class="h6 mb-3 fw-normal">Пожалуйста войдите в систему 24servis <br> или зарегистрируйтесь по ссылке  <a href="{{ url_for ('register') }}">регистрация</a> </h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="login" name="customer_login">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="customer_pwd" >
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Запомнить меня
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 24servis 2017–2021</p>
+  </form>
+    </main>
+  </div>
+</div>
+{% endblock login %}
